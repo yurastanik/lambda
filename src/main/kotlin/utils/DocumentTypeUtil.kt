@@ -24,6 +24,7 @@ object DocumentTypeUtil {
         PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.SALE) to DocumentType.Sale,
         PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.RETURN) to DocumentType.Return,
         PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.CANCEL) to DocumentType.Cancel,
+        PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.ADDITIONAL_DEPOSIT) to DocumentType.AdditionalInput,
         PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.SERVICE_DEPOSIT) to DocumentType.ServiceInput,
         PairOfTypes(InternalDocumentType.SALE, InternalDocumentSubType.SERVICE_ISSUE) to DocumentType.ServiceOutput,
         PairOfTypes(InternalDocumentType.CASH_WITHDRAWAL, InternalDocumentSubType.SALE) to DocumentType.CashWithdrawal,

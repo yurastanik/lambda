@@ -4,6 +4,7 @@ import document.receipt.IPaymentDetails
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Order
 import org.simpleframework.xml.Root
+import utils.DateTimeUtil
 
 @Root(name = "ROW")
 @Order(elements = [/*"TAXNUM",*/"NAME",/*"ACQUIREPN",*/"ACQUIRENM","ACQUIRETRANSID","POSTRANSDATE","POSTRANSNUM","DEVICEID","EPZDETAILS","AUTHCD"/*,"SUM","COMMISSION"*/])
@@ -63,6 +64,13 @@ class XmlPaymentDetails : IPaymentDetails {
 
     override fun setTransactionDateTime(transactionDateTime: String?) {
         mTransactionDateTime = transactionDateTime
+    }
+
+    override fun getFormattedTransactionDateTime(): String? {
+        getTransactionDateTime()?.let {
+            return DateTimeUtil.getFormattedDateTime(DateTimeUtil.dateFromString(it))
+        }
+        return null;
     }
 
     override fun getReceiptNumber(): String? {

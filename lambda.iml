@@ -1,13 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module version="4">
-  <component name="AutoImportedSourceRoots">
-    <option name="directories">
-      <list>
-        <option value="C:\Users\yuras\workProjects\lambda/src/main/java" />
-        <option value="C:\Users\yuras\workProjects\lambda/src/main/kotlin" />
-        <option value="C:\Users\yuras\workProjects\lambda/src/test/java" />
-        <option value="C:\Users\yuras\workProjects\lambda/src/test/kotlin" />
-      </list>
-    </option>
+
+<module version="4"> 
+  <component name="AutoImportedSourceRoots"> 
+    <option name="directories"> 
+      <list> 
+        <option value="C:\Users\yuras\workProjects\lambda/src/main/java"/>  
+        <option value="C:\Users\yuras\workProjects\lambda/src/main/kotlin"/>  
+        <option value="C:\Users\yuras\workProjects\lambda/src/test/java"/>  
+        <option value="C:\Users\yuras\workProjects\lambda/src/test/kotlin"/> 
+      </list> 
+    </option> 
+  </component>  
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/target/classes"/>
+    <output-test url="file://$MODULE_DIR$/target/test-classes"/>
+    <content>
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false"/>
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true"/>
+      <excludeFolder url="file://$MODULE_DIR$/target"/>
+    </content>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/com/amazonaws/aws-lambda-java-events/2.2.7/aws-lambda-java-events-2.2.7.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/joda-time/joda-time/2.6/joda-time-2.6.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/com/amazonaws/aws-lambda-java-core/1.2.0/aws-lambda-java-core-1.2.0.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/simpleframework/simple-xml/2.7.1/simple-xml-2.7.1.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/stax/stax/1.2.0/stax-1.2.0.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/xpp3/xpp3/1.1.3.3/xpp3-1.1.3.3.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.5.30/kotlin-stdlib-1.5.30.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.5.30/kotlin-stdlib-common-1.5.30.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://C:/Users/yuras/.m2/repository/org/json/json/20200518/json-20200518.jar!/"/>
+        </CLASSES>
+      </library>
+    </orderEntry>
   </component>
 </module>

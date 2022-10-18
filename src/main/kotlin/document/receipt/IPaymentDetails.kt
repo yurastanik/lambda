@@ -14,6 +14,8 @@ interface IPaymentDetails {
     fun getTransactionDateTime(): String?
     fun setTransactionDateTime(transactionDateTime: String?)
 
+    fun getFormattedTransactionDateTime(): String?
+
     fun getReceiptNumber(): String?
     fun setReceiptNumber(receiptNumber: String?)
 

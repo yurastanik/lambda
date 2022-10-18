@@ -13,6 +13,7 @@ enum class DocumentType(val value: String) {
 
     ServiceInput("ServiceInput"),
     ServiceOutput("ServiceOutput"),
+    AdditionalInput("AdditionalInput"),
 
     CashWithdrawal("CashWithdrawal"),
     Pawn("Pawn"),
@@ -26,5 +27,5 @@ enum class DocumentType(val value: String) {
     CurrencyOutput("CurrencyOutput"),
     CurrencyAdditionalInput("CurrencyAdditionalInput"),
 
-    FinishOffline("FinishOffline");
+    FinishOffline("FinishOffline"),
 }

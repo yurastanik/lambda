@@ -134,9 +134,9 @@
                     <td colspan="5">RRN: ${payForm.getPaymentDetails().getTransactionId()}</td>
                 </tr>
                 </#if>
-                <#if payForm.getPaymentDetails().getTransactionDateTime()?has_content>
+                <#if payForm.getPaymentDetails().getFormattedTransactionDateTime()?has_content>
                 <tr>
-                    <td colspan="5">Час транзакції ${payForm.getPaymentDetails().getTransactionDateTime()?number?number_to_datetime}</td>
+                    <td colspan="5">Час транзакції ${payForm.getPaymentDetails().getFormattedTransactionDateTime()}</td>
                 </tr>
                 </#if>
                 <#if payForm.getPaymentDetails().getReceiptNumber()?has_content>
@@ -149,6 +149,79 @@
                 </tr>
             </#if>
         </#list>
+        <tr>
+            <td colspan="5" style="text-align:center">--- &nbsp;Підсумки по формам оплати&nbsp; ---</td>
+        </tr>
+        <#list document.getPayForms() as payForm>
+            <tr>
+			    <td colspan="3">${payForm.getName()}:</td>
+			    <td colspan="2" style="text-align:right">${payForm.getSum()} грн</td>
+            </tr>
+        </#list>
+        <#if document.getTotal()?has_content>
+            <#if document.getTotal().getSumWithoutRounding()?has_content>
+                <tr>
+                    <td colspan="5" style="text-align:center">--- &nbsp;--- &nbsp;--- &nbsp;--- &nbsp;--- &nbsp;--- &nbsp;--- &nbsp;--- &nbsp;--</td>
+                </tr>
+                <tr>
+                    <td colspan="5">СУМА: ${document.getTotal().getSumWithoutRounding()} грн</td>
+                </tr>
+            </#if>
+        </#if>
+		<tr>
+			<td colspan="5" style="text-align:center">&nbsp;</td>
+		</tr>
+        </#if>
+		<#if document.getTaxRates()?has_content>
+            <tr>
+                <td colspan="5" style="text-align:center">---&nbsp; &nbsp;Підсумки по податках&nbsp; &nbsp;---</td>
+            </tr>
+
+            <#list document.getTaxRates() as taxRate>
+                <tr>
+                    <#if taxRate.getLetter()?has_content>
+                        <td style="text-align:right">${taxRate.getName()} ${taxRate.getLetter()}</td>
+                    <#else>
+                        <td style="text-align:right">${taxRate.getName()}</td>
+                    </#if>
+                    <td style="text-align:right">${taxRate.getPercent()}%</td>
+                    <td style="text-align:right">${taxRate.getSum()}</td>
+                    <#if taxRate.getSourceSum()?has_content>
+                        <td style="text-align:center">від</td>
+                        <td style="text-align:right">${taxRate.getSourceSum()}</td>
+                    </#if>
+                </tr>
+            </#list>
+            <tr>
+                <td colspan="5" style="text-align:center">&nbsp;</td>
+            </tr>
+        </#if>
+        <#if document.getTotal()?has_content>
+            <tr>
+                <td colspan="5" style="height:5px; text-align:center; width:5px">--- &nbsp;Підсумок по чеку &nbsp;---</td>
+            </tr>
+            <#if document.getTotal().getDiscountSum()?has_content>
+                <tr>
+                    <td colspan="3">ДИСКОНТ:</td>
+                    <td colspan="2" style="text-align:right">${document.getTotal().getDiscountSum()} грн</td>
+                </tr>
+            </#if>
+            <#if document.getTotal().getRoundingSum()?has_content>
+                <tr>
+                    <td colspan="3">ЗАОКРУГЛЕННЯ:</td>
+                    <td colspan="2" style="text-align:right">${document.getTotal().getRoundingSum()} &nbsp;грн</td>
+                </tr>
+            </#if>
+            <#if document.getTotal().getSum()?has_content>
+                <tr>
+                    <td colspan="3"><strong>ДО СПЛАТИ: </strong></td>
+                    <td colspan="2" style="text-align:right"><strong>${document.getTotal().getSum()} &nbsp;грн</strong></td>
+                </tr>
+            </#if>
+            <tr>
+                <td colspan="3">&nbsp;</td>
+                <td colspan="2">&nbsp;</td>
+            </tr>
         </#if>
     </table>
   </div>

@@ -8,7 +8,7 @@ import java.util.*
 object DateTimeUtil {
 
     private val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss dd.MM.yyyy")
-    private val dateTimeFormat = SimpleDateFormat("HHmmssddMMyyyy")
+    private val dateTimeFormat = DateTimeFormatter.ofPattern("ddMMyyyyHHmmss")
     private val dateFormat = SimpleDateFormat("ddMMyyyy")
     private val timeFormat = SimpleDateFormat("HHmmss")
 
@@ -27,8 +27,8 @@ object DateTimeUtil {
         return timeFormat.format(date);
     }
 
-    fun dateFromString(dateTime: String): Date
+    fun dateFromString(dateTime: String): LocalDateTime
     {
-        return dateTimeFormat.parse(dateTime)
+        return LocalDateTime.parse(dateTime, dateTimeFormat)
     }
 }
